@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: #666;
+  color: #f4f4f4;
+  height: 4rem;
+  padding-left: 1rem;
+}
+
+nav h1 {
+  line-height: 4rem;
+}
+
+nav ul, nav ul li, nav ul li a {
+  height: 100%;
+}
+
+nav ul {
+  display: flex;
+  transition: transform 0.5s;
+  z-index: 100;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: block;
+  padding: 1rem 2rem;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+input[type="checkbox"] {
+  display: none;
+  z-index: 101;
+  height: 4rem;
+  width: 4rem;
+  opacity: 0.3;
+}
+
+div.lunchbox {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+div.lunchbox:before{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 63.9%;
+  background: blue;
+  color: #fff;
+  height: 8%;
+  width: 100%;
+  transition: all 0.5s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+
+div.lunchbox:hover:before{
+  transform: scaleX(1);
+  animation-name: test;
+  animation-fill-mode: both;
+  animation-duration: 600ms;
+}
+
+@keyframes test{
+  10%{
+    background: rgb(255, 255, 255);
+  }
+  30%{
+    background: rgb(193, 193, 255);
+  }
+  50%{
+    background: rgb(166, 166, 255);
+  }
+  70%{
+    background: rgb(114, 114, 255);
+  }
+  90%{
+    background: rgb(93, 93, 255);
+  }
+  100%{
+    background: blue;
+  }
+}
+
+div.snack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ccc;
+  color: black;
+  height: 150px;
+  width: 150px;
+  margin: 0.5rem;
+  position: relative;
+}
+
+div.snack:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  background: blue;
+  color: #fff;
+  height: 10%;
+  width: 100%;
+  transition: all 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+div.snack:hover:before {
+  transform: scaleX(1);
+}
+
+div.snack:nth-child(1) {
+  order: 1;
+  background: red;
+}
+div.snack:nth-child(2) {
+  order: 2;
+  background: green;
+}
+div.snack:nth-child(3) {
+  order: 3;
+  background: pink;
+}
+div.snack:nth-child(4) {
+  order: 4;
+  background: purple;
+}
+div.snack:nth-child(5) {
+  order: 5;
+  background: yellow;
+}
+div.snack:nth-child(6) {
+  order: 6;
+  background: lightblue;
+}
+div.snack:nth-child(7) {
+  order: 7;
+  background: cyan;
+}
+div.snack:nth-child(8) {
+  order: 8;
+  background: orange;
+}
+
+
+@media (max-width: 500px) {
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    background: rgb(46, 196, 255);
+    height: 100vh;
+    width: 70vw;
+    padding-top: 4rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  input[type='checkbox'] {
+    display: block;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    transform: translateX(100%);
+  }
+}

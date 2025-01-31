@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Pokedex</title>
+</head>
+<body>
+    <h1>Pokedex</h1>
+    <div class="filter-container">
+      <input
+        type="text"
+        id="filter"
+        class="filter"
+        placeholder="Filter Pokemon..."
+      />
+    </div>
+    <nav>
+      <select id="list">
+          <option value="lowest-ascending">lowest ascending</option>
+          <option value="highest-ascending">highest ascending</option>
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+      </select>
+   </nav>
+
+
+    <div class="poke-container" id="poke-container"></div>
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
